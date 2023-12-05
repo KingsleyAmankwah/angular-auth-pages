@@ -1,0 +1,101 @@
+<div class="w-full h-full flex mx-auto">
+  <div
+    class="sider w-full min-h-screen bg-[#0267FF] relative hidden lg:block lg:w-1/2"
+  >
+    <img
+      src="../assets/man-behind-laptop.png"
+      class="w-full lg:w-[91.6%]"
+      alt="man-behind-laptop"
+    />
+    <img
+      src="../assets/bigC.png"
+      alt="top_elipse"
+      class="absolute top-0 left-0 w-32 h-32"
+    />
+
+    <img
+      src="../assets/smallC.png"
+      alt="middle_elipse"
+      class="absolute right-32 top-32 w-16 h-16"
+    />
+
+    <img
+      src="../assets/greyC.png"
+      alt="bottom_elipse"
+      class="absolute right-0 bottom-96 w-20 h-20"
+    />
+  </div>
+
+  <div class="w-full lg:w-1/2 h-full">
+    <div class="header flex justify-between text-center items-center my-12">
+      <div class="flex items-center cursor-pointer">
+        <img src="../assets/Left.png" class="w-4 h-4 ml-2" alt="back_arrow" />
+        <p class="pl-2">Back</p>
+      </div>
+      <div class="steps">
+        <p><span class="font-bold">Step </span>4 of 4</p>
+      </div>
+      <div class="exit pr-4">
+        <p>Exit</p>
+      </div>
+    </div>
+
+    <div class="content w-full h-full">
+      <h2 class="font-semibold text-3xl text-center py-3">
+        Let's get started by picking some interests
+      </h2>
+      <p class="text-center">
+        Alright let's pick something we're intereted in and get started!
+      </p>
+
+      <div class="w-full h-full">
+        <form
+          class="flex flex-col w-full h-full justify-center items-center sm:px-8 sm:pt-6 pb-8 mb-4"
+        >
+          <div class="grid grid-cols-2 gap-4 my-8 w-full lg:w-1/2">
+            <div class="rounded-md bg-[#DF9BE0] pb-4 ps-4">
+              <h1 class="font-semibold text-xl py-8">Gaming</h1>
+              <button
+                class="flex border hover:bg-white outline-none border-black hover:border-white text-xs py-2 px-6 rounded-sm"
+              >
+                Added
+                <img src="../assets/tick.png" class="ml-3 w-4 h-4" alt="" />
+              </button>
+            </div>
+            <div class="rounded-md bg-[#CCFFCC] pb-4 ps-4">
+              <h1 class="font-semibold text-xl py-8">Fashion</h1>
+              <button
+                class="border hover:bg-white outline-none border-black hover:border-white text-xs py-2 px-6 rounded-sm"
+              >
+                Add
+              </button>
+            </div>
+            <div class="rounded-md bg-[#FFC299] pb-4 ps-4">
+              <h1 class="font-semibold text-xl py-8">Music</h1>
+              <button
+                class="border hover:bg-white outline-none border-black hover:border-white text-xs py-2 px-6 rounded-sm"
+              >
+                Add
+              </button>
+            </div>
+            <div class="rounded-md bg-[#83addd] pb-4 ps-4">
+              <h1 class="font-semibold text-xl py-8">Reading</h1>
+              <button
+                class="border hover:bg-white outline-none border-black hover:border-white text-xs py-2 px-6 rounded-sm"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+          <button
+            routerLink="/complete"
+            class="bg-[#0267FF] hover:bg-blue-600 px-20 py-2.5 text-white font-normal text-xs leading-tight w-full lg:w-1/2"
+            type="submit"
+          >
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

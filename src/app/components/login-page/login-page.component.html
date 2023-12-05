@@ -22,16 +22,7 @@
   </div>
 
   <div class="register-section w-full lg:w-1/2 h-full">
-    <div class="header flex justify-around text-center items-center my-12">
-      <div class="steps">
-        <p><span class="font-bold">Step </span>1 of 4</p>
-      </div>
-      <div class="exit">
-        <p>Exit</p>
-      </div>
-    </div>
-
-    <div class="content w-full h-full">
+    <div class="content w-full h-full mt-24">
       <h2 class="font-bold text-3xl text-center">Welcome Back!</h2>
 
       <div class="w-full h-full">
@@ -39,8 +30,12 @@
           class="flex flex-col w-full h-full justify-center items-center sm:px-8 sm:pt-6 pb-8 mb-4"
         >
           <div class="form-group w-full lg:w-1/2">
-            <label for="Name">Name</label>
-            <input type="text" class="form-control" placeholder="John Doe" />
+            <label for="Email">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="johndoe@gmail.com"
+            />
           </div>
 
           <div class="form-group w-full lg:w-1/2">
@@ -57,7 +52,7 @@
               class="bg-[#0267FF] hover:bg-blue-600 px-20 py-2.5 text-white font-normal text-xs leading-tight"
               type="submit"
             >
-              Create Account
+              Login
             </button>
           </div>
 
@@ -70,13 +65,13 @@
                 alt="Google_logo"
                 class="mr-2"
               />
-              Sign up with Google
+              Continue with Google
             </p>
           </div>
 
           <div>
             <p class="text-center mt-4 text-[#a6a6a6]">
-              New Here?
+              Are you new here?
               <a
                 routerLink="/register"
                 class="text-[#0267FF] font-bold cursor-pointer"

@@ -1,8 +1,10 @@
 <div class="w-full h-full flex mx-auto">
+  @if (!showContinueButton){
+
   <div
     class="sider w-full min-h-screen bg-[#0267FF] relative hidden lg:block lg:w-1/2"
   >
-    <img src="../assets/child.png" alt="" />
+    <img src="../assets/child.png" class="w-full lg:w-[90%]" alt="" />
     <img
       src="../assets/bigC.png"
       alt="top_elipse"
@@ -21,23 +23,32 @@
       class="absolute right-0 bottom-96 w-20 h-20"
     />
   </div>
+  }@else {
+  <div class="sider w-full h-auto relative hidden lg:block lg:w-1/2">
+    <img
+      [src]="showContinueImage"
+      class="w-full lg:w-[91.6%]"
+      alt="continue_image"
+    />
+  </div>
+  }
 
-  <div class="add-photo-section w-full lg:w-1/2 h-full">
-    <div class="header flex justify-around text-center items-center my-12">
-      <div class="back flex items-center">
-        <img src="../assets/Left.png" alt="back_arrow" />
-        <p>Back</p>
+  <div class="w-full lg:w-1/2 h-full">
+    <div class="header flex justify-between text-center items-center my-12">
+      <div class="flex items-center cursor-pointer">
+        <img src="../assets/Left.png" class="w-4 h-4 ml-2" alt="back_arrow" />
+        <p class="pl-2">Back</p>
       </div>
       <div class="steps">
         <p><span class="font-bold">Step </span>2 of 4</p>
       </div>
-      <div class="exit">
+      <div class="exit pr-4">
         <p>Exit</p>
       </div>
     </div>
 
     <div class="content w-full h-full">
-      <h2 class="font-semibold text-3xl text-center">Add Photo</h2>
+      <h2 class="font-semibold text-3xl text-center py-3">Add Photo</h2>
       <p class="text-center">Add a photo so other members know who you are</p>
 
       <div class="w-full h-full">
@@ -51,27 +62,39 @@
             (change)="onSelectedFile($event)"
           />
           <div class="form-group cursor-pointer" (click)="fileInput.click()">
-            <img [src]="imageUrl" alt="" class="w-[139px] h-[139px]" />
+            <img
+              [src]="imageUrl"
+              alt=""
+              class="w-[139px] h-[139px] my-8 rounded-full"
+            />
           </div>
           <div class="form-group w-full lg:w-1/2">
-            <div
-              ngIf="!showContinueButton"
+            @if (!showContinueButton) {
+
+            <button
               class="bg-[#0267FF] hover:bg-blue-600 px-20 py-2.5 text-white font-normal text-xs leading-tight"
               type="submit"
             >
               Upload a Photo
-            </div>
-
-            <div></div>
-
-            <div
-              ngIf="fileInput.files.length > 0"
+            </button>
+            } @else{
+            <button
+              routerLink="/add-interest"
               class="bg-[#0267FF] hover:bg-blue-600 px-20 py-2.5 text-white font-normal text-xs leading-tight"
               type="submit"
             >
               Continue
-            </div>
+            </button>
+            }
           </div>
+          @if(showContinueButton){
+          <a
+            href="add-interest"
+            class="cursor-pointer text-center py-4 text-xs"
+          >
+            Skip
+          </a>
+          }
         </form>
       </div>
     </div>

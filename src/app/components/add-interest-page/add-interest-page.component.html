@@ -1,0 +1,58 @@
+<div class="w-full h-full flex">
+  <div class="w-full h-full relative hidden lg:block lg:w-1/2">
+    <img
+      [src]="backgroundImage"
+      class="w-full lg:w-[91.8%]"
+      alt="interest_image"
+    />
+  </div>
+
+  <div class="w-full lg:w-1/2 h-full">
+    <div class="header flex justify-between text-center items-center my-12">
+      <div class="flex items-center cursor-pointer">
+        <img src="../assets/Left.png" class="w-4 h-4" alt="back_arrow" />
+        <p class="pl-2">Back</p>
+      </div>
+      <div class="steps">
+        <p><span class="font-bold">Step </span>3 of 4</p>
+      </div>
+      <div class="exit pr-4">
+        <p>Exit</p>
+      </div>
+    </div>
+
+    <div class="content w-full h-full">
+      <h2 class="font-semibold text-3xl text-center py-3">
+        Hey! there What brings you here?
+      </h2>
+      <p class="text-center">This will help us make great recommendations</p>
+
+      <div class="w-full h-full">
+        <form
+          class="flex flex-col w-full h-full justify-center items-center sm:px-8 sm:pt-6 pb-8 mb-4"
+        >
+          <div class="flex flex-col my-4 py-4 w-1/2">
+            @for(interest of interestArray; track interest.name){
+
+            <button
+              class="flex w-full justify-center text-center text-xs font-medium outline-none border border-black py-2 px-4 my-4 rounded-full hover:bg-blue-600 hover:text-white hover:border-blue-600"
+            >
+              <img src="../assets/Left.png" class="w-4 h-4" alt="add_icon" />
+              <p class="pl-4">{{ interest.name }}</p>
+            </button>
+
+            }
+          </div>
+
+          <button
+            routerLink="/get-started"
+            class="bg-[#0267FF] hover:bg-blue-600 px-20 py-2.5 text-white font-normal text-xs leading-tight w-1/2 rounded-lg"
+            type="submit"
+          >
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
