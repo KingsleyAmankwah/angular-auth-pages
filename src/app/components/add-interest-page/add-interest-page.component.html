@@ -1,8 +1,8 @@
 <div class="w-full h-full flex">
-  <div class="w-full h-full relative hidden lg:block lg:w-1/2">
+  <div class="w-full relative hidden lg:block lg:w-1/2">
     <img
       [src]="backgroundImage"
-      class="w-full lg:w-[91.8%]"
+      class="w-full lg:w-[91.8%] min-h-screen object-cover"
       alt="interest_image"
     />
   </div>
@@ -29,19 +29,53 @@
 
       <div class="w-full h-full">
         <form
-          class="flex flex-col w-full h-full justify-center items-center sm:px-8 sm:pt-6 pb-8 mb-4"
+          class="flex flex-col w-full h-full justify-center items-center px-8 pt-6 pb-8 mb-4"
         >
-          <div class="flex flex-col my-4 py-4 w-1/2">
-            @for(interest of interestArray; track interest.name){
+          <div class="flex flex-col my-4 md:py-4 w-1/2">
+            <!-- @for(interest of interestArray; track interest.name){
 
             <button
-              class="flex w-full justify-center text-center text-xs font-medium outline-none border border-black py-2 px-4 my-4 rounded-full hover:bg-blue-600 hover:text-white hover:border-blue-600"
+              class="flex w-full justify-center text-center text-xs font-medium outline-none border border-black md:py-2 px-4 my-4 rounded-full hover:bg-blue-600 hover:text-white hover:border-blue-600"
             >
-              <img src="../assets/Left.png" class="w-4 h-4" alt="add_icon" />
-              <p class="pl-4">{{ interest.name }}</p>
+              <img
+                src="../assets/Left.png"
+                class="w-3 h-3 md:w-4 md:h-4"
+                alt="add_icon"
+              />
+              <p class="lg:pl-4 pl-2">{{ interest.name }}</p>
             </button>
 
-            }
+            } -->
+
+            <div
+              *ngFor="let interest of interestArray; let i = index"
+              class="flex w-full justify-center text-center text-xs font-medium outline-none border border-black md:py-2 px-4 my-4 rounded-full hover:bg-blue-600 hover:text-white hover:border-blue-600"
+              [ngClass]="{
+                'bg-blue-600 text-white': i === selectedIndex,
+                'border-black': i !== selectedIndex,
+                'hover:bg-blue-600 hover:text-white hover:border-blue-600':
+                  i !== selectedIndex
+              }"
+              (click)="selectInterest(i)"
+            >
+              <!-- <img
+                src="../assets/Left.png"
+                class="w-3 h-3 md:w-4 md:h-4"
+                [ngClass]="{ 'text-white': i === selectedIndex }"
+                alt="add_icon"
+              /> -->
+
+              <img
+                [src]="
+                  i === selectedIndex
+                    ? interest.selectedImgPath
+                    : interest.imgPath
+                "
+                class="w-3 h-3 md:w-4 md:h-4"
+                alt="add_icon"
+              />
+              <p class="lg:pl-4 pl-2">{{ interest.name }}</p>
+            </div>
           </div>
 
           <button
