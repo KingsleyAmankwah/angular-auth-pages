@@ -7,8 +7,8 @@ import { GetStartedPageComponent } from './components/get-started-page/get-start
 import { CongratsPageComponent } from './components/congrats-page/congrats-page.component';
 
 export const routes: Routes = [
-  { path: 'register', component: RegisterPageComponent },
-  { path: 'login', component: LoginPageComponent },
+  { path: '', component: RegisterPageComponent, title: 'Register Page' },
+  { path: 'login', component: LoginPageComponent, title: 'Login Page' },
   { path: 'add-photo', component: AddPhotoPageComponent },
   { path: 'add-interest', component: AddInterestPageComponent },
   { path: 'get-started', component: GetStartedPageComponent },
