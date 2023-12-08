@@ -31,12 +31,11 @@
       </div>
     </div>
 
-    <div class="content w-full h-full">
+    <div class="content  w-full h-full">
       <h2 class="font-bold text-3xl text-center">Create Account</h2>
 
-      <div class="w-full h-full" (submit)="handleRegisterClick()">
+      <div class="w-full h-full">
         <form
-          [formGroup]="registerForm"
           class="flex flex-col w-full justify-center items-center px-8 pt-6 pb-8 mb-4"
         >
           <div class="form-group w-full lg:w-1/2">
@@ -75,6 +74,7 @@
 
           <div class="form-group w-full lg:w-1/2">
             <button
+              routerLink="/add-photo"
               class="bg-[#0267FF] hover:bg-blue-600 px-20 py-2.5 text-white font-normal text-xs leading-tight"
               type="submit"
             >
