@@ -31,21 +31,32 @@
       </div>
     </div>
 
-    <div class="content  w-full h-full">
+    <div class="content w-full h-full">
       <h2 class="font-bold text-3xl text-center">Create Account</h2>
 
       <div class="w-full h-full">
         <form
           class="flex flex-col w-full justify-center items-center px-8 pt-6 pb-8 mb-4"
+          [formGroup]="registerForm"
+          (ngSubmit)="onSubmit()"
         >
           <div class="form-group w-full lg:w-1/2">
             <label for="Name">Name</label>
             <input
               type="text"
-              class="form-control"
+              class="text-xs border border-gray-300 rounded-md w-full p-2.5 outline-none"
               placeholder="John Doe"
               formControlName="name"
+              [class.error-border]="name && name.invalid && name.touched"
             />
+            <div
+              *ngIf="name && name.touched"
+              class="error-message text-xs text-red-500 start-0 w-full"
+            >
+              <span *ngIf="name && name.errors?.['required']"
+                >Name is required.</span
+              >
+            </div>
           </div>
           <div class="form-group w-full lg:w-1/2">
             <label for="E-mail">E-mail</label>
@@ -59,24 +70,65 @@
                 class="text-sm block w-full ps-8 p-2.5 border outline-none border-gray-300 rounded-md"
                 placeholder="johndoe@gmail.com"
                 formControlName="email"
+                [class.error-border-email]="
+                  email && email.invalid && email.touched
+                "
               />
+
+              <div
+                *ngIf="email && email.invalid && email.touched"
+                class="error-message text-xs text-red-500"
+              >
+                <span *ngIf="email && email.errors?.['required']"
+                  >Email is required.</span
+                >
+                <span *ngIf="email && email.errors?.['email']"
+                  >Please enter a valid email.</span
+                >
+              </div>
             </div>
           </div>
-          <div class="form-group w-full lg:w-1/2">
+          <div class="form-group w-full lg:w-1/2 relative">
             <label for="Password">Password</label>
             <input
               type="password"
-              class="form-control"
+              class="text-xs border border-gray-300 rounded-md w-full p-2.5 outline-none"
               placeholder="************"
               formControlName="password"
+              [class.error-border]="
+                password && password.invalid && password.touched
+              "
             />
+
+            <div
+              *ngIf="password && password.invalid && password.touched"
+              class="error-message text-xs text-red-500"
+            >
+              <span *ngIf="password && password.errors?.['required']"
+                >Password is required.</span
+              >
+            </div>
+
+            <div
+              class="absolute right-0 w-1/2 border-gray-700 bg-red-300 rounded-md"
+            >
+              <small
+                *ngIf="password && password?.errors?.['passwordStrength']"
+                class="text-black text-xs flex items-end justify-end italic px-2 py-1 relative"
+              >
+                Passwords must contain at least 8 characters, including
+                UPPERCASE, lowercase letters, a number, and a special character
+                (&#64;$%^&*).
+              </small>
+            </div>
           </div>
 
           <div class="form-group w-full lg:w-1/2">
             <button
               routerLink="/add-photo"
-              class="bg-[#0267FF] hover:bg-blue-600 px-20 py-2.5 text-white font-normal text-xs leading-tight"
+              class="bg-[#0267FF] hover:bg-blue-600 px-20 py-2.5 disabled:cursor-not-allowed disabled:bg-blue-300 text-white font-normal text-xs leading-tight"
               type="submit"
+              [disabled]="registerForm.invalid"
             >
               Create Account
             </button>
