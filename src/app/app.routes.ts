@@ -13,4 +13,5 @@ export const routes: Routes = [
   { path: 'add-interest', component: AddInterestPageComponent },
   { path: 'get-started', component: GetStartedPageComponent },
   { path: 'complete', component: CongratsPageComponent },
+  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
