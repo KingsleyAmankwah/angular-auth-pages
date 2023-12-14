@@ -28,29 +28,59 @@
       <div class="w-full h-full">
         <form
           class="flex flex-col w-full h-full justify-center items-center px-8 pt-6 pb-8 mb-4"
+          [formGroup]="loginForm"
+          (ngSubmit)="onSubmit()"
         >
           <div class="form-group w-full lg:w-1/2">
             <label for="Email">Email</label>
             <input
               type="email"
-              class="form-control"
+              class="text-xs border border-gray-300 rounded-md w-full p-2.5 outline-none"
               placeholder="johndoe@gmail.com"
+              formControlName="email"
+              [class.error-border]="email && email.invalid && email.touched"
             />
+
+            <div
+              *ngIf="email && email.invalid && email.touched"
+              class="error-message text-xs text-red-500"
+            >
+              <span *ngIf="email && email.errors?.['required']"
+                >Email is required.</span
+              >
+              <span *ngIf="email && email.errors?.['email']"
+                >Please enter a valid email.</span
+              >
+            </div>
           </div>
 
           <div class="form-group w-full lg:w-1/2">
             <label for="Password">Password</label>
             <input
               type="password"
-              class="form-control"
+              class="text-xs border border-gray-300 rounded-md w-full p-2.5 outline-none"
               placeholder="************"
+              formControlName="password"
+              [class.error-border]="
+                password && password.invalid && password.touched
+              "
             />
+
+            <div
+              *ngIf="password && password.invalid && password.touched"
+              class="error-message text-xs text-red-500"
+            >
+              <span *ngIf="password && password.errors?.['required']"
+                >Password is required.</span
+              >
+            </div>
           </div>
 
           <div class="form-group w-full lg:w-1/2">
             <button
-              class="bg-[#0267FF] hover:bg-blue-600 px-20 py-2.5 text-white font-normal text-xs leading-tight"
+              class="bg-[#0267FF] disabled:cursor-not-allowed disabled:bg-blue-300 hover:bg-blue-600 px-20 py-2.5 text-white font-normal text-xs leading-tight"
               type="submit"
+              [disabled]="loginForm.invalid"
             >
               Login
             </button>
