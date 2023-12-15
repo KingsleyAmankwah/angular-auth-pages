@@ -1,5 +1,5 @@
 <div align="center" id="top"> 
-![register-page](https://github.com/KingsleyAmankwah/angular-auth-pages/assets/64941442/abc954c8-f746-4c90-9428-2fe5a5637d9a)
+
 
 
 
@@ -10,6 +10,8 @@
 <h1 align="center">Angular Auth UI</h1>
 
 ![add-interest](https://github.com/KingsleyAmankwah/angular-auth-pages/assets/64941442/22229872-44cd-46b5-b269-894208dc6c1a)
+
+![register-page](https://github.com/KingsleyAmankwah/angular-auth-pages/assets/64941442/abc954c8-f746-4c90-9428-2fe5a5637d9a)
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0; 
