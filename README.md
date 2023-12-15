@@ -9,11 +9,7 @@
 
 <h1 align="center">Angular Auth UI</h1>
 
-Status
 
- <h4 align="center"> 
-	 Ui Demo 🚀 Under construction...  
-</h4>
 
 <hr>
 
