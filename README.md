@@ -1,11 +1,14 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Ui Demo" />
+![register-page](https://github.com/KingsleyAmankwah/angular-auth-pages/assets/64941442/f4cb4565-a4a5-4d5c-8ce1-87825bf9151a)
+
 
 &#xa0;
 
 </div>
 
 <h1 align="center">Angular Auth UI</h1>
+
+![add-interest](https://github.com/KingsleyAmankwah/angular-auth-pages/assets/64941442/22229872-44cd-46b5-b269-894208dc6c1a)
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0; 
