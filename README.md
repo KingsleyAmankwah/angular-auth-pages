@@ -60,7 +60,7 @@ $ npm
 # Run the project
 $ ng serve -o
 
-# The server will initialize in the <http://localhost:3000>
+# The server will initialize in the <http://localhost:4200>
 ```
 
 Made with :heart: by <a href="https://github.com/KingsleyAmankwah/" target="_blank">Kingsley Amankwah</a>
