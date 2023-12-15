@@ -1,27 +1,70 @@
-# UiDemo
+<div align="center" id="top"> 
+  <img src="./.github/app.gif" alt="Ui Demo" />
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
+&#xa0;
 
-## Development server
+<a href="https://pages-auth.vercel.app/">Demo</a>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+</div>
 
-## Code scaffolding
+<h1 align="center">Angular Auth UI</h1>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Status
 
-## Build
+ <h4 align="center"> 
+	 Ui Demo 🚀 Under construction...  
+</h4>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<hr>
 
-## Running unit tests
+<p align="center">
+  <a href="#dart-about">About</a> &#xa0; | &#xa0; 
+  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
+  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
+  <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+</p>
 
-## Running end-to-end tests
+<br>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## :dart: About
 
-## Further help
+Authentication user interfaces built with angular and typescript
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## :sparkles: Features
+
+:heavy_check_mark: Input Validation;\
+:heavy_check_mark: Google Oauth Design;\
+:heavy_check_mark: Mobile responsivess;
+
+## :rocket: Technologies
+
+The following tools were used in this project:
+
+- [Angular](https://angular.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+## :white_check_mark: Requirements
+
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+
+## :checkered_flag: Starting
+
+```bash
+# Clone this project
+$ git clone https://github.com/{{YOUR_GITHUB_USERNAME}}/ui-demo
+
+# Access
+$ cd ui-demo
+
+# Install dependencies
+$ npm
+
+# Run the project
+$ ng serve -o
+
+# The server will initialize in the <http://localhost:3000>
+```
+
+Made with :heart: by <a href="https://github.com/KingsleyAmankwah/" target="_blank">Kingsley Amankwah</a>
