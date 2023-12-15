@@ -1,5 +1,6 @@
 <div align="center" id="top"> 
-![register-page](https://github.com/KingsleyAmankwah/angular-auth-pages/assets/64941442/f4cb4565-a4a5-4d5c-8ce1-87825bf9151a)
+![register-page](https://github.com/KingsleyAmankwah/angular-auth-pages/assets/64941442/abc954c8-f746-4c90-9428-2fe5a5637d9a)
+
 
 
 &#xa0;
