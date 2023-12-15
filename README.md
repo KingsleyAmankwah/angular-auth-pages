@@ -3,15 +3,9 @@
 
 &#xa0;
 
-<a href="https://pages-auth.vercel.app/">Demo</a>
-
 </div>
 
 <h1 align="center">Angular Auth UI</h1>
-
-
-
-<hr>
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0; 
