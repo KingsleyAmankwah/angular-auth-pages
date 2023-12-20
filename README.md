@@ -1,17 +1,10 @@
-<div align="center" id="top"> 
-
-
-
+<div align="center" id="top">
 
 &#xa0;
 
 </div>
 
-<h1 align="center">Angular Auth UI</h1>
-
-![register-page](https://github.com/KingsleyAmankwah/angular-auth-pages/assets/64941442/abc954c8-f746-4c90-9428-2fe5a5637d9a)
-
-![add-interest](https://github.com/KingsleyAmankwah/angular-auth-pages/assets/64941442/22229872-44cd-46b5-b269-894208dc6c1a)
+<h1 align="center">Angular Auth Pages</h1>
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0; 
@@ -26,7 +19,8 @@
 
 ## :dart: About
 
-Authentication user interfaces built with angular and typescript
+Angular Auth Pages is a well tailored pages consisting of (SignUp, SignIn, Interest Pages, Verification Page and Congrats Pages)
+built with Angular, Typescript and TailwindCSS
 
 ## :sparkles: Features
 
@@ -34,12 +28,19 @@ Authentication user interfaces built with angular and typescript
 :heavy_check_mark: Google Oauth Design;\
 :heavy_check_mark: Mobile responsivess;
 
+## Screenshots
+
+![register-page](https://github.com/KingsleyAmankwah/angular-auth-pages/assets/64941442/abc954c8-f746-4c90-9428-2fe5a5637d9a)
+
+![add-interest](https://github.com/KingsleyAmankwah/angular-auth-pages/assets/64941442/22229872-44cd-46b5-b269-894208dc6c1a)
+
 ## :rocket: Technologies
 
 The following tools were used in this project:
 
 - [Angular](https://angular.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [TailwindCSS](https://tailwindcss.com/docs/installation)
 
 ## :white_check_mark: Requirements
 
@@ -55,7 +56,7 @@ $ git clone https://github.com/KingsleyAmankwah/angular-auth-pages
 $ cd ui-demo
 
 # Install dependencies
-$ npm
+$ npm install
 
 # Run the project
 $ ng serve -o
